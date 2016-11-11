@@ -1,6 +1,10 @@
-
-.row{
-	margin: 0px;
+body{
+	background: #ecf0f1 url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+}
+.row,
+.form-horizontal .form-group{
+	margin-right: 0px;
+	margin-left: 0px;
 }
 .landingPage{
 	font-family: 'Raleway', sans-serif;
@@ -27,7 +31,6 @@
 	line-height: 90px;
 	margin: 0px;
 	font-weight: 300;
-
 }
 .app-info{
 	margin-top: 25vh;
@@ -74,6 +77,13 @@
   border-width: 0px 1px 1px 1px;
   border-color: #ccc;
 	padding: 10px 20px 20px 20px;
+	cursor: pointer;
+}
+.card:hover{
+	border: 0px;
+	-webkit-box-shadow:1px 1px 1px 2px #ccc;
+	-moz-box-shadow:1px 1px 1px 2px #ccc;
+  box-shadow:1px 1px 1px 2px #ccc;
 }
 .card-title{
 	font-family: 'Raleway', sans-serif;
@@ -90,15 +100,22 @@
 	font-family: 'Raleway', sans-serif;
 	font-family: 300;
 }
+.editBox .page-name{
+	margin: 0px 0px 30px 0px;
+}
 .action-btn{
 	background: transparent;
 	color: black;
 	border-color: #ccc;
 	border-radius: 2px;
 }
+.editBox .form-control .action-btn{
+	color: #C1C1C1;
+	border-color: #C1C1C1;
+}
 .action-btn:hover{
 	background: transparent;
-	border-color: black;
+	border-caedolor: black;
 	color: black;
 }
 .action-btn:focus{
@@ -125,6 +142,7 @@
 .form-control{
 	border-radius: 0px;
 	margin-top: 5px;
+	background-color: transparent;
 }
 .form-control:focus{
 	border-color: #ccc;
@@ -156,7 +174,7 @@
 }
 .editBox .list-inline>li,
 .editBox .list-unstyled>li{
-	background: #eee;
+	background: #ddd;
 	padding: 8px;
 	border-radius: 2px;
 	margin: 5px 5px 5px 0px;
@@ -202,6 +220,15 @@
 	.hidden-sm{
 		display: block;	
 	}
+	.appName{
+		font-size: 50px;
+	}
+	.card:hover{
+		border-style: solid;
+	  border-width: 0px 1px 1px 1px;
+	  border-color: #ccc;
+	  box-shadow:none;
+	}
 }
 @media screen and (min-width: 768px){
 	.hidden-sm{
@@ -209,5 +236,32 @@
 	}
 	.form-horizontal .control-label{
 		padding-top: 12px;
+	}
+}
+@media screen and (max-width: 768px){
+	.form-group{
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.card-title{
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 400px){
+	.appName{
+		font-size: 40px;
+	}
+	.appDescription{
+		font-size: 25px;
+	}
+	.card-title{
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 340px){
+	.card{
+		padding: 15px;
 	}
 }

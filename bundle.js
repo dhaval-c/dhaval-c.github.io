@@ -19849,7 +19849,7 @@
 	        time: 70,
 	        id: _nodeUuid2.default.v4()
 	      }],
-	      isEditing: '',
+	      isEditing: false,
 	      sortValue: '',
 	      currentRecipe: {
 	        title: '',
@@ -19922,7 +19922,10 @@
 	      var sortValue = this.state.sortValue;
 
 	      if (this.state.isEditing === true) {
-	        return _react2.default.createElement(_edit_box2.default, { currentRecipe: this.state.currentRecipe, onSave: this.onSave });
+	        var boxType = this.state.allRecipes.filter(function (recipe) {
+	          return _this2.state.currentRecipe.id === recipe.id;
+	        });
+	        return _react2.default.createElement(_edit_box2.default, { currentRecipe: this.state.currentRecipe, onSave: this.onSave, boxType: boxType.length === 0 ? 'Add' : 'Edit' });
 	      } else if (this.state.isEditing === false) {
 	        return _react2.default.createElement(
 	          'div',
@@ -24395,7 +24398,9 @@
 							{ className: "card-block" },
 							_react2.default.createElement(
 								"h2",
-								{ className: "card-title" },
+								{ className: "card-title", onClick: function onClick() {
+										return _this2.setState({ viewMore: !_this2.state.viewMore });
+									} },
 								_react2.default.createElement(
 									"span",
 									{ className: "text-left" },
@@ -24607,6 +24612,19 @@
 								_react2.default.createElement(
 									"div",
 									{ className: "box-wrapper" },
+									_react2.default.createElement(
+										"div",
+										{ className: "col-xs-12" },
+										_react2.default.createElement(
+											"h1",
+											{ className: "page-name text-center" },
+											_react2.default.createElement(
+												"span",
+												null,
+												this.props.boxType + " Recipe"
+											)
+										)
+									),
 									_react2.default.createElement(
 										"form",
 										{ className: "form-horizontal" },
