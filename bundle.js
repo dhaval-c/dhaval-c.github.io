@@ -19849,7 +19849,7 @@
 	        time: 70,
 	        id: _nodeUuid2.default.v4()
 	      }],
-	      isEditing: false,
+	      isEditing: '',
 	      sortValue: '',
 	      currentRecipe: {
 	        title: '',
